@@ -1,0 +1,46 @@
+#accordion.accordion
+	h3.accordion__title
+		| Наличие в магазинах
+	.accordion-section
+		input.accordion-section__input(type='radio' name='all')
+		label.accordion-section__label(for='all')
+			| Во всех магазинах
+		input.accordion-section__input(type='radio' name='near')
+		label.accordion-section__label(for='near')
+			| В ближайших ко мне магазинах
+
+	h3.accordion__title
+		| Бренды
+	.accordion-section
+		each item in brand
+			input.accordion-section__input(type='checkbox' name= item)
+			label.accordion-section__label(for= item)= item
+		a.accordion-section__clear#clearBrand(href='#')
+			| Сбросить фильтр
+
+	h3.accordion__title Цена
+	.accordion-section
+		label.accordion-section__label(for='price-min')
+			| от
+		input.accordion-section__input(type='text' name='price-min')
+		label.accordion-section__label(for='price-max')
+			| до
+		input.accordion-section__input(type='text' name='price-max')
+		
+
+
+	h3.accordion__title
+		| Цвет
+	ul.accordion-section.unstyled-list
+		each value, key in color
+			li.accordion-section__list
+				a.accordion-section__color(href='#' id= key)= value
+
+	h3.accordion__title
+		| Операционная система
+	.accordion-section
+		each item in os
+			input.accordion-section__input(type='checkbox' name= item)
+			label.accordion-section__label(for= item)= item
+		a.accordion-section__clear#clearOs(href='#')
+			| Сбросить фильтр

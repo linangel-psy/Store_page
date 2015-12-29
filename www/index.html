@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="icon" type="image/png" href="img/favicon.ico">
+		<meta charset="utf-8">
+		<title> Мобильные телефоны</title>
+		<link rel="stylesheet" type="text/css" href="css/main.min.css">
+	</head>
+	<body>
+		<div class="main">
+			<header class="header">
+				<div class="contact-box">
+					<ul class="socials unstyled-list">
+						<li class="socials__list"><a href="#" class="socials__link socials__link_header socials__link_header_facebook">facebook</a></li>
+						<li class="socials__list"><a href="#" class="socials__link socials__link_header socials__link_header_vk">vk</a></li>
+						<li class="socials__list"><a href="#" class="socials__link socials__link_header socials__link_header_twitter">twitter</a></li>
+					</ul>
+					<ul class="contact-info unstyled-list">
+						<li class="contact-info__list">
+							<address class="contact-info__address">ул. Маяковская 6, офис 17</address>
+						</li>
+						<li class="contact-info__list"><a href="tel:+79211231213" class="contact-info__phone">+7 (921) 123-12-13</a></li>
+					</ul>
+				</div>
+				<div class="header-box">
+					<div class="logo"> <a href="index.html" class="logo__link"><img src="img/logo_header.png" alt="logo" class="logo__img"><span class="logo__text">Home</span></a></div>
+					<div class="search-box">
+						<form class="search">
+							<input type="search" placeholder="Что будем искать" class="search__input-search">
+							<input type="submit" value="Найти" class="search__input-submit">
+						</form>
+					</div>
+					<ul class="shop-menu unstyled-list">
+						<li class="shop-menu__list"><a href="#" class="shop-menu__link shop-menu__link_header">Карта проезда</a></li>
+						<li class="shop-menu__list"><a href="#" class="shop-menu__link shop-menu__link_header">История заказов</a></li>
+						<li class="shop-menu__list"><a href="#" class="shop-menu__link shop-menu__link_header">Корзина</a></li>
+					</ul>
+				</div>
+				<div class="nav">
+					<ul class="nav-menu unstyled-list">
+						<li class="nav-menu__list"><a href="#" class="nav-menu__link nav-menu__link_header">Планшеты</a></li>
+						<li class="nav-menu__list"><a href="#" class="nav-menu__link nav-menu__link_header">Мобильные телефоны</a></li>
+						<li class="nav-menu__list"><a href="#" class="nav-menu__link nav-menu__link_header">MP3 плееры</a></li>
+						<li class="nav-menu__list"><a href="#" class="nav-menu__link nav-menu__link_header">Персональные компьютеры</a></li>
+						<li class="nav-menu__list"><a href="#" class="nav-menu__link nav-menu__link_header">Ноутбуки</a></li>
+						<li class="nav-menu__list"><a href="#" class="nav-menu__link nav-menu__link_header">Аксессуары</a></li>
+						<li class="nav-menu__list"><a href="#" class="nav-menu__link nav-menu__link_header">Бытовая техника</a></li>
+					</ul>
+				</div>
+			</header>
+			<div class="content">
+				<ul class="breadcrumb unstyled-list">
+					<li class="breadcrumb__list"><a href="#" class="breadcrumb__link">Главная</a></li>
+					<li class="breadcrumb__list breadcrumb__list_current"><a href="#" class="breadcrumb__link">Каталог</a></li>
+				</ul>
+				<h1 class="page-title">Мобильные телефоны</h1>
+				<aside class="aside">
+					<ul class="popularity unstyled-list">
+						<li class="popularity__list"><a href="#" class="popularity__link">Флагманы</a></li>
+						<li class="popularity__list"><a href="#" class="popularity__link">Бюджетная линейка</a></li>
+					</ul>
+					<div id="accordion" class="accordion">
+						<h3 class="accordion__title">Наличие в магазинах</h3>
+						<div class="accordion-section">
+							<input type="radio" name="all" class="accordion-section__input">
+							<label for="all" class="accordion-section__label">Во всех магазинах</label>
+							<input type="radio" name="near" class="accordion-section__input">
+							<label for="near" class="accordion-section__label">В ближайших ко мне магазинах</label>
+						</div>
+						<h3 class="accordion__title">Бренды</h3>
+						<div class="accordion-section">
+							<input type="checkbox" name="Lenovo" class="accordion-section__input">
+							<label for="Lenovo" class="accordion-section__label">Lenovo</label>
+							<input type="checkbox" name="Apple" class="accordion-section__input">
+							<label for="Apple" class="accordion-section__label">Apple</label>
+							<input type="checkbox" name="Samsung" class="accordion-section__input">
+							<label for="Samsung" class="accordion-section__label">Samsung</label>
+							<input type="checkbox" name="Asus" class="accordion-section__input">
+							<label for="Asus" class="accordion-section__label">Asus</label>
+							<input type="checkbox" name="Motorola" class="accordion-section__input">
+							<label for="Motorola" class="accordion-section__label">Motorola</label><a id="clearBrand" href="#" class="accordion-section__clear">Сбросить фильтр</a>
+						</div>
+						<h3 class="accordion__title">Цена</h3>
+						<div class="accordion-section">
+							<label for="price-min" class="accordion-section__label">от</label>
+							<input type="text" name="price-min" class="accordion-section__input">
+							<label for="price-max" class="accordion-section__label">до</label>
+							<input type="text" name="price-max" class="accordion-section__input">
+						</div>
+						<h3 class="accordion__title">Цвет</h3>
+						<ul class="accordion-section unstyled-list">
+							<li class="accordion-section__list"><a href="#" id="White" class="accordion-section__color">Белый</a></li>
+							<li class="accordion-section__list"><a href="#" id="Grey" class="accordion-section__color">Серый</a></li>
+							<li class="accordion-section__list"><a href="#" id="Black" class="accordion-section__color">Черный</a></li>
+							<li class="accordion-section__list"><a href="#" id="Navy" class="accordion-section__color">Синий</a></li>
+							<li class="accordion-section__list"><a href="#" id="Red" class="accordion-section__color">Красный</a></li>
+							<li class="accordion-section__list"><a href="#" id="Yellow" class="accordion-section__color">Желтый</a></li>
+							<li class="accordion-section__list"><a href="#" id="Orange" class="accordion-section__color">Оранжевый</a></li>
+							<li class="accordion-section__list"><a href="#" id="Green" class="accordion-section__color">Зеленый</a></li>
+							<li class="accordion-section__list"><a href="#" id="Blue" class="accordion-section__color">Голубой</a></li>
+							<li class="accordion-section__list"><a href="#" id="Violet" class="accordion-section__color">Фиолетовый</a></li>
+							<li class="accordion-section__list"><a href="#" id="Pink" class="accordion-section__color">Розовый</a></li>
+							<li class="accordion-section__list"><a href="#" id="Brown" class="accordion-section__color">Коричневый</a></li>
+						</ul>
+						<h3 class="accordion__title">Операционная система</h3>
+						<div class="accordion-section">
+							<input type="checkbox" name="Android" class="accordion-section__input">
+							<label for="Android" class="accordion-section__label">Android</label>
+							<input type="checkbox" name="iOS" class="accordion-section__input">
+							<label for="iOS" class="accordion-section__label">iOS</label>
+							<input type="checkbox" name="Windows Mobile" class="accordion-section__input">
+							<label for="Windows Mobile" class="accordion-section__label">Windows Mobile</label>
+							<input type="checkbox" name="Symbian" class="accordion-section__input">
+							<label for="Symbian" class="accordion-section__label">Symbian</label>
+							<input type="checkbox" name="Custom" class="accordion-section__input">
+							<label for="Custom" class="accordion-section__label">Custom</label><a id="clearOs" href="#" class="accordion-section__clear">Сбросить фильтр</a>
+						</div>
+					</div>
+				</aside>
+				<section class="section">
+					<div class="sort">
+						<p class="sort__label">Сортировать по</p>
+						<ul class="sort__list unstyled-list">
+							<li class="sort__choice">по цене</li>
+							<li class="sort__choice">по популярности</li>
+						</ul>
+						<p class="sort__label">Вид каталога</p>
+						<ul class="sort__show unstyled-list">
+							<li class="sort__type sort__type_list-block">list block</li>
+							<li class="sort__type sort__type_block">block</li>
+							<li class="sort__type sort__type_list">list</li>
+						</ul>
+					</div>
+					<ul class="products unstyled-list">
+											<li class="product">
+												<div class="product__code-label">Артикул&nbsp;<span class="product__code">189238</span></div>
+												<div class="product__slideshow"></div><img src="product_img/189238_1.png" alt="Samsung GT-I9301I GALAXY S 3" class="product__img"><img src="product_img/189238_2.png" alt="Samsung GT-I9301I GALAXY S 3" class="product__img"><img src="product_img/189238_3.png" alt="Samsung GT-I9301I GALAXY S 3" class="product__img">
+												<h4 class="product__title">Samsung GT-I9301I GALAXY S 3</h4>
+												<div class="product__description">
+													<p class="product__attr">Тип SIM-карты&nbsp;<span class="product__value">Micro-SIM</span></p>
+													<p class="product__attr">Количество SIM-карт&nbsp;<span class="product__value">1</span></p>
+													<p class="product__attr">Цвет&nbsp;<span class="product__value">Белый</span></p>
+													<p class="product__attr">ОC&nbsp;<span class="product__value">Android</span></p>
+													<p class="product__attr">Связь 3G&nbsp;<span class="product__value">Есть</span></p>
+													<p class="product__attr">4G (LTE)&nbsp;<span class="product__value">Нет</span></p>
+													<p class="product__attr">GPS-модуль&nbsp;<span class="product__value">Есть</span></p>
+													<p class="product__description-text">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц</p>
+													<div class="product__rating"></div>
+													<div class="product__price">11 290 &#8381;</div>
+													<div class="product__availability">В наличии</div>
+												</div>
+											</li>
+											<li class="product">
+												<div class="product__code-label">Артикул&nbsp;<span class="product__code">283135</span></div>
+												<div class="product__slideshow"></div><img src="product_img/283135_1.png" alt="Microsoft Lumia 640 RM-1077" class="product__img"><img src="product_img/283135_2.png" alt="Microsoft Lumia 640 RM-1077" class="product__img"><img src="product_img/283135_3.png" alt="Microsoft Lumia 640 RM-1077" class="product__img">
+												<h4 class="product__title">Microsoft Lumia 640 RM-1077</h4>
+												<div class="product__description">
+													<p class="product__attr">Тип SIM-карты&nbsp;<span class="product__value">Micro-SIM</span></p>
+													<p class="product__attr">Количество SIM-карт&nbsp;<span class="product__value">2</span></p>
+													<p class="product__attr">Цвет&nbsp;<span class="product__value">Белый</span></p>
+													<p class="product__attr">ОC&nbsp;<span class="product__value">Windows Phone</span></p>
+													<p class="product__attr">Связь 3G&nbsp;<span class="product__value">Есть</span></p>
+													<p class="product__attr">4G (LTE)&nbsp;<span class="product__value">Нет</span></p>
+													<p class="product__attr">GPS-модуль&nbsp;<span class="product__value">A-GPS</span></p>
+													<p class="product__description-text">Вместе с новой Microsoft Lumia 640 Dual SIM (RM-1077) вы открываете мир ярких цифровых возможностей. Этот многофункциональный смартфон уже содержит набор бесплатных сервисов Microsoft</p>
+													<div class="product__rating"></div>
+													<div class="product__price">10 990 &#8381;</div>
+													<div class="product__availability">В наличии</div>
+												</div>
+											</li>
+											<li class="product">
+												<div class="product__code-label">Артикул&nbsp;<span class="product__code">345328</span></div>
+												<div class="product__slideshow"></div><img src="product_img/345328_1.png" alt="Archos 50 Oxygen Plus" class="product__img"><img src="product_img/345328_2.png" alt="Archos 50 Oxygen Plus" class="product__img"><img src="product_img/345328_3.png" alt="Archos 50 Oxygen Plus" class="product__img">
+												<h4 class="product__title">Archos 50 Oxygen Plus</h4>
+												<div class="product__description">
+													<p class="product__attr">Тип SIM-карты&nbsp;<span class="product__value">Micro-SIM</span></p>
+													<p class="product__attr">Количество SIM-карт&nbsp;<span class="product__value">2</span></p>
+													<p class="product__attr">Цвет&nbsp;<span class="product__value">Серый</span></p>
+													<p class="product__attr">ОC&nbsp;<span class="product__value">Android</span></p>
+													<p class="product__attr">Связь 3G&nbsp;<span class="product__value">Есть</span></p>
+													<p class="product__attr">4G (LTE)&nbsp;<span class="product__value">Нет</span></p>
+													<p class="product__attr">GPS-модуль&nbsp;<span class="product__value">Есть</span></p>
+													<p class="product__description-text">Смартфон Archos 50 Oxygen Plus, серый. Моноблок, Micro-SIM, Android , 3G, Bluetooth, USB-подключение к ПК, Wi-Fi, Разрешение основной камеры 8 Мп</p>
+													<div class="product__rating"></div>
+													<div class="product__price">9 900 &#8381;</div>
+													<div class="product__availability">В наличии</div>
+												</div>
+											</li>
+											<li class="product">
+												<div class="product__code-label">Артикул&nbsp;<span class="product__code">589338</span></div>
+												<div class="product__slideshow"></div><img src="product_img/589338_1.png" alt="Philips S398 Black" class="product__img"><img src="product_img/589338_2.png" alt="Philips S398 Black" class="product__img"><img src="product_img/589338_3.png" alt="Philips S398 Black" class="product__img">
+												<h4 class="product__title">Philips S398 Black</h4>
+												<div class="product__description">
+													<p class="product__attr">Тип SIM-карты&nbsp;<span class="product__value">Micro-SIM</span></p>
+													<p class="product__attr">Количество SIM-карт&nbsp;<span class="product__value">2</span></p>
+													<p class="product__attr">Цвет&nbsp;<span class="product__value">Черный</span></p>
+													<p class="product__attr">ОC&nbsp;<span class="product__value">Android</span></p>
+													<p class="product__attr">Связь 3G&nbsp;<span class="product__value">Есть</span></p>
+													<p class="product__attr">4G (LTE)&nbsp;<span class="product__value">Нет</span></p>
+													<p class="product__attr">GPS-модуль&nbsp;<span class="product__value">Есть</span></p>
+													<p class="product__description-text">Смартфон Philips S398 Black. Черный корпус и разнообразие цветных панелей для Philips S398 как нельзя лучше подчеркнут ваш статус и уверенность в себе. Преимущества этой модели</p>
+													<div class="product__rating"></div>
+													<div class="product__price">8 990 &#8381;</div>
+													<div class="product__availability">В наличии</div>
+												</div>
+											</li>
+											<li class="product">
+												<div class="product__code-label">Артикул&nbsp;<span class="product__code">387228</span></div>
+												<div class="product__slideshow"></div><img src="product_img/387228_1.png" alt="Microsoft Lumia 430 RM-10" class="product__img"><img src="product_img/387228_2.png" alt="Microsoft Lumia 430 RM-10" class="product__img"><img src="product_img/387228_3.png" alt="Microsoft Lumia 430 RM-10" class="product__img">
+												<h4 class="product__title">Microsoft Lumia 430 RM-10</h4>
+												<div class="product__description">
+													<p class="product__attr">Тип SIM-карты&nbsp;<span class="product__value">Micro-SIM</span></p>
+													<p class="product__attr">Количество SIM-карт&nbsp;<span class="product__value">2</span></p>
+													<p class="product__attr">Цвет&nbsp;<span class="product__value">Черный</span></p>
+													<p class="product__attr">ОC&nbsp;<span class="product__value">Windows Phone</span></p>
+													<p class="product__attr">Связь 3G&nbsp;<span class="product__value">Есть</span></p>
+													<p class="product__attr">4G (LTE)&nbsp;<span class="product__value">Нет</span></p>
+													<p class="product__attr">GPS-модуль&nbsp;<span class="product__value">A-GPS</span></p>
+													<p class="product__description-text">Смартфон Microsoft Lumia 430 RM-1099 black Куда бы вы ни направлялись, смартфон должен быть надежным спутником. Поэтому у Microsoft Lumia 430 Dual SIM (RM-1099) удобный компактный корпус</p>
+													<div class="product__rating"></div>
+													<div class="product__price">5 390 &#8381;</div>
+													<div class="product__availability">В наличии</div>
+												</div>
+											</li>
+											<li class="product">
+												<div class="product__code-label">Артикул&nbsp;<span class="product__code">359110</span></div>
+												<div class="product__slideshow"></div><img src="product_img/359110_1.png" alt="Senseit L301 Black" class="product__img"><img src="product_img/359110_2.png" alt="Senseit L301 Black" class="product__img"><img src="product_img/359110_3.png" alt="Senseit L301 Black" class="product__img">
+												<h4 class="product__title">Senseit L301 Black</h4>
+												<div class="product__description">
+													<p class="product__attr">Тип SIM-карты&nbsp;<span class="product__value">Micro-SIM</span></p>
+													<p class="product__attr">Количество SIM-карт&nbsp;<span class="product__value">2</span></p>
+													<p class="product__attr">Цвет&nbsp;<span class="product__value">Черный</span></p>
+													<p class="product__attr">ОC&nbsp;<span class="product__value">Android</span></p>
+													<p class="product__attr">Связь 3G&nbsp;<span class="product__value">Есть</span></p>
+													<p class="product__attr">4G (LTE)&nbsp;<span class="product__value">Нет</span></p>
+													<p class="product__attr">GPS-модуль&nbsp;<span class="product__value">Есть</span></p>
+													<p class="product__description-text">Смартфон Senseit L301 black, черный. Micro-SIM, две поддерживаемых SIM-карты, Android, 3G, GPS-модуль</p>
+													<div class="product__rating"></div>
+													<div class="product__price">4 990 &#8381;</div>
+													<div class="product__availability">В наличии</div>
+												</div>
+											</li>
+											<li class="product">
+												<div class="product__code-label">Артикул&nbsp;<span class="product__code">422105</span></div>
+												<div class="product__slideshow"></div><img src="product_img/422105_1.png" alt="HIGHSCREEN WinWin Black" class="product__img"><img src="product_img/422105_2.png" alt="HIGHSCREEN WinWin Black" class="product__img"><img src="product_img/422105_3.png" alt="HIGHSCREEN WinWin Black" class="product__img">
+												<h4 class="product__title">HIGHSCREEN WinWin Black</h4>
+												<div class="product__description">
+													<p class="product__attr">Тип SIM-карты&nbsp;<span class="product__value">Micro-SIM</span></p>
+													<p class="product__attr">Количество SIM-карт&nbsp;<span class="product__value">2</span></p>
+													<p class="product__attr">Цвет&nbsp;<span class="product__value">Черный</span></p>
+													<p class="product__attr">ОC&nbsp;<span class="product__value">Windows Phone</span></p>
+													<p class="product__attr">Связь 3G&nbsp;<span class="product__value">Есть</span></p>
+													<p class="product__attr">4G (LTE)&nbsp;<span class="product__value">Нет</span></p>
+													<p class="product__attr">GPS-модуль&nbsp;<span class="product__value">Есть</span></p>
+													<p class="product__description-text">Смартфон HIGHSCREEN WinWin Black оснащен 4&quot; дисплеем и двумя слотами для SIM-карт. Windows Phone , 3G, Bluetooth, USB-подключение к ПК</p>
+													<div class="product__rating"></div>
+													<div class="product__price">3 990 &#8381;</div>
+													<div class="product__availability">В наличии</div>
+												</div>
+											</li>
+											<li class="product">
+												<div class="product__code-label">Артикул&nbsp;<span class="product__code">112234</span></div>
+												<div class="product__slideshow"></div><img src="product_img/112234_1.png" alt="Alcatel OT4013D PIXI 3 (2 SIM)" class="product__img"><img src="product_img/112234_2.png" alt="Alcatel OT4013D PIXI 3 (2 SIM)" class="product__img"><img src="product_img/112234_3.png" alt="Alcatel OT4013D PIXI 3 (2 SIM)" class="product__img">
+												<h4 class="product__title">Alcatel OT4013D PIXI 3 (2 SIM)</h4>
+												<div class="product__description">
+													<p class="product__attr">Тип SIM-карты&nbsp;<span class="product__value">Micro-SIM</span></p>
+													<p class="product__attr">Количество SIM-карт&nbsp;<span class="product__value">2</span></p>
+													<p class="product__attr">Цвет&nbsp;<span class="product__value">Белый</span></p>
+													<p class="product__attr">ОC&nbsp;<span class="product__value">Android</span></p>
+													<p class="product__attr">Связь 3G&nbsp;<span class="product__value">Есть</span></p>
+													<p class="product__attr">4G (LTE)&nbsp;<span class="product__value">Нет</span></p>
+													<p class="product__attr">GPS-модуль&nbsp;<span class="product__value">A-GPS</span></p>
+													<p class="product__description-text">Смартфон Смартфон Alcatel OT4013D PIXI 3 (2 SIM).  Смартфон Alcatel One Touch 4013D оснащен четырехдюймовым дисплеем и двумя слотами для SIM-карт</p>
+													<div class="product__rating"></div>
+													<div class="product__price">3 210 &#8381;</div>
+													<div class="product__availability">В наличии</div>
+												</div>
+											</li>
+											<li class="product">
+												<div class="product__code-label">Артикул&nbsp;<span class="product__code">187537</span></div>
+												<div class="product__slideshow"></div><img src="product_img/187537_1.png" alt="Fly IQ434 Era Nano 5" class="product__img"><img src="product_img/187537_2.png" alt="Fly IQ434 Era Nano 5" class="product__img"><img src="product_img/187537_3.png" alt="Fly IQ434 Era Nano 5" class="product__img">
+												<h4 class="product__title">Fly IQ434 Era Nano 5</h4>
+												<div class="product__description">
+													<p class="product__attr">Тип SIM-карты&nbsp;<span class="product__value">Micro-SIM</span></p>
+													<p class="product__attr">Количество SIM-карт&nbsp;<span class="product__value">2</span></p>
+													<p class="product__attr">Цвет&nbsp;<span class="product__value">Черный</span></p>
+													<p class="product__attr">ОC&nbsp;<span class="product__value">Android</span></p>
+													<p class="product__attr">Связь 3G&nbsp;<span class="product__value">Нет</span></p>
+													<p class="product__attr">4G (LTE)&nbsp;<span class="product__value">Нет</span></p>
+													<p class="product__attr">GPS-модуль&nbsp;<span class="product__value">Нет</span></p>
+													<p class="product__description-text">Смартфон Fly IQ434 Era Nano 5 оснащен 3.5&quot; дисплеем и двумя слотами для SIM-карт. Android 2.3, Micro SD, Wi-Fi</p>
+													<div class="product__rating"></div>
+													<div class="product__price">1 790 &#8381;</div>
+													<div class="product__availability">В наличии</div>
+												</div>
+											</li>
+					</ul>
+					<ul class="page-nav unstyled-list">
+						<li class="page-nav__list page-nav__list_prev"><</li>
+						<li class="page-nav__list page-nav__list_num"><a href="#" class="page-nav__link">1</a></li>
+						<li class="page-nav__list page-nav__list_num"><a href="#" class="page-nav__link">2</a></li>
+						<li class="page-nav__list page-nav__list_num"><a href="#" class="page-nav__link">3</a></li>
+						<li class="page-nav__list page-nav__list_next">></li>
+					</ul>
+				</section>
+				<div class="info">
+					<div class="info">
+						<h4 class="info__title">Важная информация</h4>
+						<p class="info__text">Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
+						<p class="info__text">Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+						<p class="info__text">Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся структура организации позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.</p>
+						<p class="info__text">Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
+						<p class="info__text">Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+						<p class="info__text">Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="logo-box">
+				<div class="logo"> <a href="index.html" class="logo__link"><img src="img/logo_footer.png" alt="logo" class="logo__img"><span class="logo__text">Home</span></a></div>
+			</div>
+			<div class="link-box">
+				<ul class="socials unstyled-list">
+					<li class="socials__list"><a href="#" class="socials__link socials__link_footer socials__link_footer_facebook">facebook</a></li>
+					<li class="socials__list"><a href="#" class="socials__link socials__link_footer socials__link_footer_vk">vk</a></li>
+					<li class="socials__list"><a href="#" class="socials__link socials__link_footer socials__link_footer_twitter">twitter</a></li>
+				</ul>
+				<ul class="footer-menu unstyled-list">
+					<li class="footer-menu__list"><a href="#" class="footer-menu__link footer-menu__link_footer">Планшеты</a></li>
+					<li class="footer-menu__list"><a href="#" class="footer-menu__link footer-menu__link_footer">Мобильные телефоны</a></li>
+					<li class="footer-menu__list"><a href="#" class="footer-menu__link footer-menu__link_footer">MP3 плееры</a></li>
+					<li class="footer-menu__list"><a href="#" class="footer-menu__link footer-menu__link_footer">Персональные компьютеры</a></li>
+					<li class="footer-menu__list"><a href="#" class="footer-menu__link footer-menu__link_footer">Ноутбуки</a></li>
+					<li class="footer-menu__list"><a href="#" class="footer-menu__link footer-menu__link_footer">Аксессуары</a></li>
+					<li class="footer-menu__list"><a href="#" class="footer-menu__link footer-menu__link_footer">Бытовая техника</a></li>
+				</ul>
+			</div>
+			<p class="copyright">All rights reserved. 2015. no copy allowed</p>
+		</footer>
+	</body>
+</html>

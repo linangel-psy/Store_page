@@ -1,0 +1,41 @@
+mixin products(name, list)
+	li.product
+		.product__code-label
+			| Артикул&nbsp;
+			span.product__code= list.code
+		.product__slideshow
+		each item in list.img
+			img.product__img(src= item alt=name)
+
+		h4.product__title= name
+		.product__description
+			p.product__attr
+				| Тип SIM-карты&nbsp;
+				span.product__value= list.sim_type
+			p.product__attr
+				| Количество SIM-карт&nbsp;
+				span.product__value= list.sim_number
+			p.product__attr
+				| Цвет&nbsp;
+				span.product__value= list.color
+			p.product__attr
+				| ОC&nbsp;
+				span.product__value= list.os
+			p.product__attr
+				| Связь 3G&nbsp;
+				span.product__value= list.has3g
+			p.product__attr
+				| 4G (LTE)&nbsp;
+				span.product__value= list.has4g
+			p.product__attr
+				| GPS-модуль&nbsp;
+				span.product__value= list.gps
+			p.product__description-text= list.description
+			.product__rating
+			.product__price= list.price 
+				| &#8381;
+			.product__availability= list.availability
+
+ul.products.unstyled-list
+	each value, key in phones		
+		+products(key, value)

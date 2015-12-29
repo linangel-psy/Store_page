@@ -1,0 +1,8 @@
+ul.page-nav.unstyled-list
+	li.page-nav__list.page-nav__list_prev
+		| <
+	- for(var page = 1; page <= 3; page++)
+		li.page-nav__list.page-nav__list_num
+			a.page-nav__link(href='#')= page
+	li.page-nav__list.page-nav__list_next
+		| >

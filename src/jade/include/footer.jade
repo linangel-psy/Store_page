@@ -1,0 +1,16 @@
+footer.footer
+	- var src = 'img/logo_footer.png'
+	.logo-box
+		include ../include/logo
+
+	.link-box
+		ul.socials.unstyled-list
+			- var style = footer;
+			include ../include/socials
+		-var className = 'footer-menu'
+		ul(class=''+ className).unstyled-list
+			-var list = nav
+			include ../include/nav
+
+	p.copyright
+		| All rights reserved. 2015. no copy allowed

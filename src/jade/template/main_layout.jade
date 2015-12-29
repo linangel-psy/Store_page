@@ -1,0 +1,23 @@
+include ../include/var
+
+doctype html
+html
+	head
+		link(rel='icon' type='image/png' href='img/favicon.ico')
+		meta(charset='utf-8')
+		title 
+			block title
+		link(rel='stylesheet' type='text/css' href='css/main.min.css')
+
+	body
+		.main
+			include ../include/header
+
+			.content
+				ul.breadcrumb.unstyled-list
+					block breadcrumb
+
+				block content
+
+		include ../include/footer
+
