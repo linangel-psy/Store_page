@@ -1,6 +1,6 @@
 .products
 	width: 760px
-	margin-bottom: 70px
+	margin-bottom: 50px
 	.product__button
 		font-family: $fontBold
 		font-size: $fontSize
@@ -12,9 +12,9 @@
 	border: 1px solid $colorGray
 	background: #FBFBFB
 .product:hover
+	z-index: 2
 	box-shadow: 0px 1px 7.2px 0.8px rgba(153, 153, 153, 0.75)
 	position: relative
-    z-index: 2
 .product__slideshow
 	width: 135px
 	margin: auto
@@ -81,7 +81,7 @@
 	.product
 		width: 232px
 		margin: 0 15px 15px 0
-		height: 515px
+		height: 513px
 		vertical-align: top
 		border-radius: 10px
 	.product__code-label, .product__code, .product__description-text, .product__title-type
@@ -117,7 +117,7 @@
 	.product__button
 		float: right
 
-.products_line-block
+.products_list-block
 	.product
 		width: 740px
 		margin-bottom: -1px
@@ -138,9 +138,12 @@
 		overflow: hidden
 		border-left: 1px solid $colorGray
 		margin-top: 20px
+	.product__img-line
+
 	.product__code
 		text-align: center
-		margin-bottom: 10px
+		margin-bottom: 15px
+		margin-top: -5px
 	.product__title
 		font-size: 18px
 		overflow: hidden
@@ -149,6 +152,7 @@
 	.product__description, .product__title-type
 		display: none		
 	.product__description-text
+		margin-top: -5px
 		margin-bottom: 15px
 		height: 76px
 		overflow: hidden
@@ -163,7 +167,7 @@
 	.product__availability
 		display: block
 		margin-left: 31px
-.products_line
+.products_list
 	.product
 		width: 740px
 		margin-bottom: -1px

@@ -54,6 +54,6 @@ mixin products(name, list)
 			input.product__button.button(type='submit' value='В корзину')
 			.product__availability= list.availability
 
-ul.products.products_line-block.unstyled-list
+ul.products.products_block.unstyled-list
 	each value, key in phones		
 		+products(key, value)

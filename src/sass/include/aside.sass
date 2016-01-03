@@ -24,14 +24,11 @@
 	height: 1px
 	width: 332px
 	background: $colorGray
-
 .accordion__title
 	width: 100%
 	padding-left: 27px
 	font-family: $fontSemibold
 	line-height: 46px
-.accordion__title_open:hover 
-
 .accordion__title_open:after
 	content: ' '
 	display: inline-block
@@ -64,6 +61,7 @@
 	width: 80px
 	line-height: 25px
 	margin-left: 10px
+	text-indent: 10px
 	border: 1px solid $colorGray
 	border-radius: 3px
 .accordion-section__label
@@ -122,12 +120,18 @@
 	display: inline-block
 	vertical-align: top
 	margin-left: 7px
+	width: 240px
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis
 .accordion-section__clear
 	display: inline-block
 	color: #5DB2FC
-.accordion-section__slider
-	margin-bottom: 15px
-.accordion-section__list
+.accordion-section__text-box
+	margin-bottom: 18px
+	margin-left: -7px
+	.accordion-section__text
+		width: 115px
 .accordion-section_color
 	margin-top: 0
 	margin-bottom: 0
@@ -146,7 +150,6 @@ $color-list: $white $gray $black $navy $red $yellow $orange $green $blue $violet
 	.accordion-section__color_#{nth($color, 10)}
 		@include sprite-position($color)
 .accordion-section__color:hover
-	border: 2px solid $coloreOrange
-	margin-right: 14px
-.accordion-section__color_active
-	border: 3px solid $coloreOrange
+	border-color: lighten($coloreOrange, 15%)
+.accordion-section__color_active, .accordion-section__color_active:hover
+	border-color: $coloreOrange

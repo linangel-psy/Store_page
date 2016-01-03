@@ -1,4 +1,5 @@
 .sort
+	position: relative
 	width: 740px
 	background: #E4EBEE
 	border: 1px solid $colorGray
@@ -20,7 +21,8 @@
 	margin-left: 20px
 	color: #5D656C
 .sort__item_list-label
-	width: 140px
+	position: relative
+	width: 130px
 	line-height: 25px
 	font-family: $fontLight
 	color: #7F7F7F
@@ -29,14 +31,24 @@
 	border: 1px solid $colorGray
 	border-radius: 3px
 	box-shadow: inset 0px 1px 1px 0px rgba(148, 148, 148, 0.43)
+	cursor: pointer
 .sort__item_list-label:after
 	content: ' '
 	display: inline-block
-	margin-left: 60px
+	position: absolute
+	top: 8px
+	right: 5px
+.sort__item_list-label_closed:after
 	@include sprite($show-line-sort)
+.sort__item_list-label_open:after
+	@include sprite($hide-line-sort)
 .sort__item_list
 	display: none
-	width: 140px
+	z-index: 10
+	position: absolute
+	top: 24px
+	left: 138px
+	width: 135px
 	line-height: 25px
 	font-family: $fontLight
 	color: #7F7F7F
@@ -44,6 +56,10 @@
 	background: #fff
 	border: 1px solid $colorGray
 	border-radius: 3px
+	box-shadow: 0px 1px 4.85px 0.15px rgba(134, 134, 134, 0.75)
+.sort__choice
+	width: 100%
+	cursor: pointer
 .sort__choice:hover
 	font-family: $fontSemibold
 .sort__item_show
@@ -72,9 +88,10 @@
 	@include sprite-position($block_hover)
 .sort__link_list:hover
 	@include sprite-position($list_hover)
-.sort__link_list-block_active
-	@include sprite-position($list_block_hover)
-.sort__link_block_active
-	@include sprite-position($block_hover)
-.sort__link_list_active
-	@include sprite-position($list_hover)
+.sort__type_active
+	.sort__link_list-block
+		@include sprite-position($list_block_hover)
+	.sort__link_block
+		@include sprite-position($block_hover)
+	.sort__link_list
+		@include sprite-position($list_hover)

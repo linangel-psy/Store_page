@@ -22,7 +22,6 @@ var paths = {
 
     js: {
     	src: 'src/js/**/*.js',
-        location: 'src/js/main.js',
         destination: 'www/js'
     },
 
@@ -60,7 +59,7 @@ gulp.task('sass-compile', function () {
 
 /* -------- concat js -------- */
 gulp.task('concat-js', function () {
-    return gulp.src(paths.js.location)
+    return gulp.src(paths.js.src)
         .pipe(sourcemaps.init())
         .pipe(concat('main.min.js'))
         .pipe(uglify())

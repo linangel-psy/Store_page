@@ -2,7 +2,11 @@ ul.page-nav.unstyled-list
 	li.page-nav__list.page-nav__list_prev
 		a.page-nav__link(href='#') <
 	- for(var page = 1; page <= 3; page++)
-		li.page-nav__list.page-nav__list_num
-			a.page-nav__link(href='#')= page
+		if page != 1
+			li.page-nav__list.page-nav__list_num
+				a.page-nav__link(href='#')= page
+		else
+			li.page-nav__list.page-nav__list_num.page-nav__list_active
+				a.page-nav__link(href='#')= page
 	li.page-nav__list.page-nav__list_next
 		a.page-nav__link(href='#') >

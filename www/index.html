@@ -8,6 +8,8 @@
 		<link rel="stylesheet" type="text/css" href="css/main.min.css">
 		<link rel="stylesheet" type="text/css" href="css/fonts.css">
 		<script src="bower/jquery/dist/jquery.min.js" type="text/javascript"></script>
+		<script src="bower/jquery.columnizer/src/jquery.columnizer.js" type="text/javascript"></script>
+		<script src="js/main.min.js" type="text/javascript"></script>
 	</head>
 	<body>
 		<div class="main">
@@ -36,9 +38,12 @@
 								<input type="submit" value="Найти" class="button">
 							</form>
 							<ul class="shop-menu unstyled-list">
-								<li class="shop-menu__list"><a href="#" class="shop-menu__link">Карта проезда</a></li>
-								<li class="shop-menu__list"><a href="#" class="shop-menu__link">История заказов</a></li>
-								<li class="shop-menu__list"><a href="#" class="shop-menu__link">Корзина</a></li>
+								<li class="shop-menu__list"><a href="#" class="shop-menu__link">Карта проезда</a>
+								</li>
+								<li class="shop-menu__list"><a href="#" class="shop-menu__link">История заказов</a>
+								</li>
+								<li class="shop-menu__list"><a href="#" class="shop-menu__link">Корзина</a>
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -47,13 +52,20 @@
 					<div class="conteiner">
 						<nav class="nav">
 							<ul class="nav-menu unstyled-list">
-								<li class="nav-menu__list"><a href="#" class="nav-menu__link">Планшеты</a></li>
-								<li class="nav-menu__list"><a href="#" class="nav-menu__link">Мобильные телефоны</a></li>
-								<li class="nav-menu__list"><a href="#" class="nav-menu__link">Mp3 плееры</a></li>
-								<li class="nav-menu__list"><a href="#" class="nav-menu__link">Персональные компьютеры</a></li>
-								<li class="nav-menu__list"><a href="#" class="nav-menu__link">Ноутбуки</a></li>
-								<li class="nav-menu__list"><a href="#" class="nav-menu__link">Аксессуары</a></li>
-								<li class="nav-menu__list"><a href="#" class="nav-menu__link">Бытовая техника</a></li>
+								<li class="nav-menu__list"><a href="#" class="nav-menu__link">Планшеты</a>
+								</li>
+								<li class="nav-menu__list"><a href="#" class="nav-menu__link nav-menu__link_active">Мобильные телефоны</a>
+								</li>
+								<li class="nav-menu__list"><a href="#" class="nav-menu__link">Mp3 плееры</a>
+								</li>
+								<li class="nav-menu__list"><a href="#" class="nav-menu__link">Персональные компьютеры</a>
+								</li>
+								<li class="nav-menu__list"><a href="#" class="nav-menu__link">Ноутбуки</a>
+								</li>
+								<li class="nav-menu__list"><a href="#" class="nav-menu__link">Аксессуары</a>
+								</li>
+								<li class="nav-menu__list"><a href="#" class="nav-menu__link">Бытовая техника</a>
+								</li>
 							</ul>
 						</nav>
 					</div>
@@ -129,19 +141,21 @@
 												<div class="accordion-section__choice accordion-section__choice_checkbox"></div>
 												<div class="accordion-section__text">Motorola</div>
 											</label>
-										</div><a id="clearBrand" href="#" class="accordion-section__clear">Сбросить фильтр</a>
+										</div><a href="#" class="accordion-section__clear">Сбросить фильтр</a>
 									</div>
 								</div>
 								<div class="box">
 									<div class="accordion__title accordion__title_open"><a href="#" class="accordion__title-link">Цена</a></div>
 									<div class="accordion-section">
-										<div class="accordion-section__text">от
-											<input type="text" id="price-min" class="accordion-section__input accordion-section__input_text accordion-section__input_text_min">
+										<div class="accordion-section__text-box">
+											<div class="accordion-section__text">от
+												<input type="text" id="price-min" class="accordion-section__input accordion-section__input_text accordion-section__input_text_min">
+											</div>
+											<div class="accordion-section__text accordion-section__text_right">до
+												<input type="text" id="price-max" class="accordion-section__input accordion-section__input_text accordion-section__input_text_max">
+											</div>
 										</div>
-										<div class="accordion-section__text accordion-section__text_right">до
-											<input type="text" id="price-max" class="accordion-section__input accordion-section__input_text accordion-section__input_text_max">
-										</div>
-										<div class="accordion-section__slider"></div>
+										<div id="slider-range" class="accordion-section__slider"></div>
 									</div>
 								</div>
 								<div class="box">
@@ -160,7 +174,8 @@
 										<li class="accordion-section__list"><a href="#" class="accordion-section__color accordion-section__color_pink">Розовый</a></li>
 										<li class="accordion-section__list"><a href="#" class="accordion-section__color accordion-section__color_brown">Коричневый</a></li>
 									</ul>
-									<div class="box"></div>
+								</div>
+								<div class="box">
 									<div class="accordion__title accordion__title_open"><a href="#" class="accordion__title-link">Операционная система</a></div>
 									<div class="accordion-section">
 										<div class="accordion-section__line">
@@ -197,7 +212,7 @@
 												<div class="accordion-section__choice accordion-section__choice_checkbox"></div>
 												<div class="accordion-section__text">Custom</div>
 											</label>
-										</div><a id="clearOs" href="#" class="accordion-section__clear">Сбросить фильтр</a>
+										</div><a href="#" class="accordion-section__clear">Сбросить фильтр</a>
 									</div>
 								</div>
 							</div>
@@ -206,7 +221,7 @@
 							<div class="sort">
 								<div class="sort__box sort__box_left">
 									<div class="sort__item sort__item_label">Сортировать по</div>
-									<div class="sort__item sort__item_list-label">по цене</div>
+									<div class="sort__item sort__item_list-label sort__item_list-label_closed">по цене</div>
 									<ul class="sort__item sort__item_list unstyled-list">
 										<li class="sort__choice">по цене</li>
 										<li class="sort__choice">по популярности</li>
@@ -221,7 +236,7 @@
 									</ul>
 								</div>
 							</div>
-							<ul class="products products_line-block unstyled-list">
+							<ul class="products products_block unstyled-list">
 															<li class="product">
 																<div class="product__box product__box_img">
 																	<div class="product__slideshow">
@@ -594,7 +609,7 @@
 							</ul>
 							<ul class="page-nav unstyled-list">
 								<li class="page-nav__list page-nav__list_prev"><a href="#" class="page-nav__link"><</a></li>
-								<li class="page-nav__list page-nav__list_num"><a href="#" class="page-nav__link">1</a></li>
+								<li class="page-nav__list page-nav__list_num page-nav__list_active"><a href="#" class="page-nav__link">1</a></li>
 								<li class="page-nav__list page-nav__list_num"><a href="#" class="page-nav__link">2</a></li>
 								<li class="page-nav__list page-nav__list_num"><a href="#" class="page-nav__link">3</a></li>
 								<li class="page-nav__list page-nav__list_next"><a href="#" class="page-nav__link">></a></li>
@@ -604,12 +619,14 @@
 					<div class="info">
 						<div class="info">
 							<div class="info__title">Важная информация</div>
-							<p>Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
-							<p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
-							<p>Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся структура организации позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.</p>
-							<p>Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
-							<p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
-							<p>Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся</p>
+							<div class="info__text">
+								<p>Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
+								<p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+								<p>Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся структура организации позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.</p>
+								<p>Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
+								<p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+								<p>Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -627,13 +644,20 @@
 						<li class="socials__list"><a href="#" target="_blank" class="socials__link socials__link_twitter">twitter</a></li>
 					</ul>
 					<ul class="footer-menu unstyled-list">
-						<li class="footer-menu__list"><a href="#" class="footer-menu__link">Планшеты</a></li>
-						<li class="footer-menu__list"><a href="#" class="footer-menu__link">Мобильные телефоны</a></li>
-						<li class="footer-menu__list"><a href="#" class="footer-menu__link">Mp3 плееры</a></li>
-						<li class="footer-menu__list"><a href="#" class="footer-menu__link">Персональные компьютеры</a></li>
-						<li class="footer-menu__list"><a href="#" class="footer-menu__link">Ноутбуки</a></li>
-						<li class="footer-menu__list"><a href="#" class="footer-menu__link">Аксессуары</a></li>
-						<li class="footer-menu__list"><a href="#" class="footer-menu__link">Бытовая техника</a></li>
+						<li class="footer-menu__list"><a href="#" class="footer-menu__link">Планшеты</a>
+						</li>
+						<li class="footer-menu__list"><a href="#" class="footer-menu__link footer-menu__link_active">Мобильные телефоны</a>
+						</li>
+						<li class="footer-menu__list"><a href="#" class="footer-menu__link">Mp3 плееры</a>
+						</li>
+						<li class="footer-menu__list"><a href="#" class="footer-menu__link">Персональные компьютеры</a>
+						</li>
+						<li class="footer-menu__list"><a href="#" class="footer-menu__link">Ноутбуки</a>
+						</li>
+						<li class="footer-menu__list"><a href="#" class="footer-menu__link">Аксессуары</a>
+						</li>
+						<li class="footer-menu__list"><a href="#" class="footer-menu__link">Бытовая техника</a>
+						</li>
 					</ul>
 				</div>
 			</div>

@@ -1,3 +1,6 @@
 each item in list
 	li(class=''+ className+ '__list')
-		a(href='#' class=''+ className+ '__link')= item
+		if item != 'Мобильные телефоны'
+			a(href='#' class=''+ className+ '__link')= item
+		else
+			a(href='#' class=''+ className+ '__link' class=''+ className+ '__link_active')= item

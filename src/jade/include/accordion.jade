@@ -24,20 +24,21 @@
 						input.accordion-section__input.accordion-section__input_hidden(type='checkbox' id= item)
 						.accordion-section__choice.accordion-section__choice_checkbox
 						.accordion-section__text= item
-			a.accordion-section__clear#clearBrand(href='#')
+			a.accordion-section__clear(href='#')
 				| Сбросить фильтр
 
 	.box
 		.accordion__title.accordion__title_open
 			a.accordion__title-link(href='#') Цена
 		.accordion-section
-			.accordion-section__text
-				| от
-				input.accordion-section__input.accordion-section__input_text.accordion-section__input_text_min(type='text' id='price-min')
-			.accordion-section__text.accordion-section__text_right
-				| до
-				input.accordion-section__input.accordion-section__input_text.accordion-section__input_text_max(type='text' id='price-max')
-			.accordion-section__slider
+			.accordion-section__text-box
+				.accordion-section__text
+					| от
+					input.accordion-section__input.accordion-section__input_text.accordion-section__input_text_min(type='text' id='price-min')
+				.accordion-section__text.accordion-section__text_right
+					| до
+					input.accordion-section__input.accordion-section__input_text.accordion-section__input_text_max(type='text' id='price-max')
+			.accordion-section__slider#slider-range
 			
 
 
@@ -49,7 +50,7 @@
 				li.accordion-section__list
 					a.accordion-section__color(class='accordion-section__color_'+ key href='#')= value
 
-		.box
+	.box
 		.accordion__title.accordion__title_open
 			a.accordion__title-link(href='#') Операционная система
 		.accordion-section
@@ -59,7 +60,7 @@
 						input.accordion-section__input.accordion-section__input_hidden(type='checkbox' id= item)
 						.accordion-section__choice.accordion-section__choice_checkbox
 						.accordion-section__text= item
-			a.accordion-section__clear#clearOs(href='#')
+			a.accordion-section__clear(href='#')
 
 
 				| Сбросить фильтр
