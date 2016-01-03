@@ -1,0 +1,152 @@
+.aside
+	display: table-cell
+	width: 340px
+.asaide-section
+	border: 1px solid $colorGray
+	border-radius: 10px
+	background: #FBFBFB
+	margin-bottom: 38px 
+	overflow: hidden
+.asaide-section__link
+	display: inline-block
+	height: 100%
+	width: 100%
+	text-decoration: none
+	color: #7F7F7F
+	padding-left: 27px
+	line-height: 45px
+.asaide-section__link_active
+	background: #D9E5EA
+	color: #5D656C
+.box:not(:last-child):after
+	content: ' '
+	display: block
+	height: 1px
+	width: 332px
+	background: $colorGray
+
+.accordion__title
+	width: 100%
+	padding-left: 27px
+	font-family: $fontSemibold
+	line-height: 46px
+.accordion__title_open:hover 
+
+.accordion__title_open:after
+	content: ' '
+	display: inline-block
+	@include sprite($hide-line)
+.accordion__title_closed:after
+	content: ' '
+	display: inline-block
+	@include sprite($show-line)
+.accordion__title-link
+	display: inline-block
+	text-decoration: none
+	color: #000
+	height: 100%
+	width: 273px
+.accordion__title_open, .accordion__title:hover
+	font-size: $fontSizeTitles
+.accordion__title_closed:hover
+	background: #D9E5EA
+.accordion-section
+	width: 273px
+	margin-left: 27px
+	margin-bottom: 15px
+.accordion-section__line
+	margin-bottom: 15px
+.accordion-section__input_hidden
+	position: absolute
+	top: 0px
+	left: -9999px
+.accordion-section__input_text
+	width: 80px
+	line-height: 25px
+	margin-left: 10px
+	border: 1px solid $colorGray
+	border-radius: 3px
+.accordion-section__label
+	display: block
+	position: relative
+.accordion-section__text_right
+	float: right
+.accordion-section__choice
+	display: inline-block
+	width: 13px
+	height: 13px
+	border: 3px solid $colorGray
+	overflow: hidden
+.accordion-section__choice_radio
+	border-radius: 50%
+.accordion-section__choice_radio:after
+	content: ' '
+	display: block
+	width: 0px
+	height: 0px
+	background: $coloreOrange
+	border-radius: 50%
+	position: absolute
+	top: 5px
+	left: 5px
+.accordion-section__label:hover
+	.accordion-section__choice_radio:after
+		width: 9px
+		height: 9px
+.accordion-section__input:checked + .accordion-section__choice_radio
+	border-color: $coloreOrange
+.accordion-section__input:checked + .accordion-section__choice_radio:after
+	width: 9px
+	height: 9px
+.accordion-section__choice_checkbox
+	background: $colorGray
+	border-radius: 5px
+.accordion-section__choice_checkbox:after
+	content: ' '
+	display: block
+	width: 13px
+	height: 10px
+	position: absolute
+	top: 3px
+	left: 3px
+.accordion-section__label:hover
+	.accordion-section__input:not(:checked) + .accordion-section__choice_checkbox:after
+		@include sprite-image($checkbox-hover)
+		@include sprite-position($checkbox-hover)
+.accordion-section__input:checked + .accordion-section__choice_checkbox
+	background: $coloreOrange
+	border-color: $coloreOrange
+	@include sprite-image($checkbox-checked)
+	@include sprite-position($checkbox-checked)
+.accordion-section__text
+	display: inline-block
+	vertical-align: top
+	margin-left: 7px
+.accordion-section__clear
+	display: inline-block
+	color: #5DB2FC
+.accordion-section__slider
+	margin-bottom: 15px
+.accordion-section__list
+.accordion-section_color
+	margin-top: 0
+	margin-bottom: 0
+.accordion-section__color
+	display: block
+	text-indent: 100px
+	overflow: hidden
+	margin: 0 12px 12px 0
+	border: 3px solid transparent
+	border-radius: 3px
+	@include sprite-image($white)
+	@include sprite-width($white)
+	@include sprite-height($white)
+$color-list: $white $gray $black $navy $red $yellow $orange $green $blue $violet $pink $brown
+@each $color in $color-list
+	.accordion-section__color_#{nth($color, 10)}
+		@include sprite-position($color)
+.accordion-section__color:hover
+	border: 2px solid $coloreOrange
+	margin-right: 14px
+.accordion-section__color_active
+	border: 3px solid $coloreOrange

@@ -1,0 +1,141 @@
+.header
+	width: 100%
+	min-width: 1100px
+
+.contact-box
+	background: #fff
+	width: 100%
+	box-shadow: 0px 2px 0px 0px #EBEDEF
+	padding-top: 10px
+	padding-bottom: 10px
+	margin-bottom: 30px
+.socials__header
+	display: inline-block
+	float: left
+	.socials__list
+		overflow: hidden
+		margin-right: 13px
+	.socials__link
+		display: block
+		text-indent: 100px
+		@include sprite-image($header-fb)
+		@include sprite-width($header-vk)
+		@include sprite-height($header-fb)
+	.socials__link_facebook
+		@include sprite-position($header-fb)
+	.socials__link_facebook:hover
+		@include sprite-position($header-fb-hover)
+	.socials__link_vk
+		@include sprite-position($header-vk)
+	.socials__link_vk:hover
+		@include sprite-position($header-vk-hover)
+	.socials__link_twitter
+		@include sprite-position($header-tw)
+	.socials__link_twitter:hover
+		@include sprite-position($header-tw-hover)
+
+.contact-info
+	display: inline-block
+	float: right
+.contact-info__list
+	
+.contact-info__address
+	font-style: normal
+.contact-info__address:before
+	content: ' '
+	display: inline-block
+	@include sprite($address)
+	margin-right: 10px
+	position: relative
+	top: 2px
+.contact-info__phone
+	margin-left: 82px
+	text-decoration: none
+	color: #000
+	font-family: $fontSemibold
+	font-size: 18px
+.contact-info__phone:before
+	content: ' '
+	display: inline-block
+	@include sprite($phone)
+	margin-right: 10px
+	position: relative
+	top: 2px
+
+.header-box
+	width: 100%
+	margin-bottom: 27px
+.logo 
+	display: inline-block
+	overflow: hidden
+	width: 237px
+	height: 35px
+.logo_header	
+
+.logo__link
+	display: block
+	height: 100%
+.logo__img
+	
+.logo__text
+	display: block
+	text-indent: 100%
+.search-box
+	display: inline-block
+	float: right
+	width: 805px
+.search
+	float: left
+	.button
+		border-radius: 0 5px 5px 0
+		margin-left: -5px
+		padding: 5px 17px 6px 17px
+.search__input-search
+	border: 1px solid $colorGray
+	border-radius: 5px 0 0 5px
+	padding: 7px 0 7px 15px
+	width: 270px
+	background: #FBFBFB
+.search__input-search:focus
+	outline: none
+.search__input-submit
+
+.shop-menu
+	display: inline-block
+	float: right
+	margin-top: 5px
+.shop-menu__list
+	margin-left: 30px
+.shop-menu__link
+	color: #000
+	font-size: $fontSizeTitles
+	font-family: $fontSemibold
+.shop-menu__link:hover
+	color: $coloreOrange
+.nav-box
+	width: 100%
+	background: #fff
+	line-height: 50px
+	font-size: $fontSizeTitles
+.nav
+	width: 1100px
+	margin: auto
+	box-shadow: 0px 2px 0px 0px #EBEDEF
+.nav-menu
+
+.nav-menu__list
+
+.nav-menu__link
+	display: block
+	height: 100%
+	text-align: center
+	font-size: $fontSizeTitles
+	text-decoration: none
+	color: #000
+	padding: 0 13px 0 13px
+.nav-menu__link:hover
+	background: #E4E2E2
+.nav-menu__link_active, .nav-menu__link_active:hover
+	background: $coloreOrange
+	color: #fff
+	font-family: $fontBold

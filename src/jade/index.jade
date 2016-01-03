@@ -7,27 +7,27 @@ block breadcrumb
 	li.breadcrumb__list
 		a.breadcrumb__link(href='#')
 			| Главная
-	li.breadcrumb__list.breadcrumb__list_current
-		a.breadcrumb__link(href='#')
+	li.breadcrumb__list
+		a.breadcrumb__link.breadcrumb__link_current(href='#')
 			| Каталог
 
 block content
 
 	h1.page-title
 		| Мобильные телефоны
+	.content-box
+		aside.aside
+			include include/popularity
 
-	aside.aside
-		include include/popularity
+			- var brand = phoneBrands;
+			- var os = phoneOs;
+			- var color = phoneColor;
+			include include/accordion
 
-		- var brand = phoneBrands;
-		- var os = phoneOs;
-		- var color = phoneColor;
-		include include/accordion
-
-	section.section
-		include include/sort
-		include include/products
-		include include/page_nav
+		section.section
+			include include/sort
+			include include/products
+			include include/page_nav
 
 	.info
 		include include/info

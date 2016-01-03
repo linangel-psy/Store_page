@@ -1,41 +1,59 @@
 mixin products(name, list)
 	li.product
-		.product__code-label
-			| Артикул&nbsp;
-			span.product__code= list.code
-		.product__slideshow
-		each item in list.img
-			img.product__img(src= item alt=name)
-
-		h4.product__title= name
-		.product__description
-			p.product__attr
-				| Тип SIM-карты&nbsp;
-				span.product__value= list.sim_type
-			p.product__attr
-				| Количество SIM-карт&nbsp;
-				span.product__value= list.sim_number
-			p.product__attr
-				| Цвет&nbsp;
-				span.product__value= list.color
-			p.product__attr
-				| ОC&nbsp;
-				span.product__value= list.os
-			p.product__attr
-				| Связь 3G&nbsp;
-				span.product__value= list.has3g
-			p.product__attr
-				| 4G (LTE)&nbsp;
-				span.product__value= list.has4g
-			p.product__attr
-				| GPS-модуль&nbsp;
-				span.product__value= list.gps
-			p.product__description-text= list.description
-			.product__rating
-			.product__price= list.price 
-				| &#8381;
+		.product__box.product__box_img
+			.product__slideshow
+				.product__img-box.product__img-box_big
+					img.product__img(src= list.img[0] alt=name)
+				.product__img-line
+					each item in list.img
+						.product__img-box.product__img-box_mini
+							img.product__img(src= item alt=name)
+			.product__code
+				span.product__code-label
+					| Артикул&nbsp;
+				= list.code
+		.product__box.product__box_about
+			h4.product__title
+				span.product__title-type= list.type
+				| &nbsp;
+				= name
+			.product__description
+				.product__attr
+					| Тип SIM-карты&nbsp;
+					span.product__value= list.sim_type
+				.product__attr
+					| Количество SIM-карт&nbsp;
+					span.product__value= list.sim_number
+				.product__attr
+					| Цвет&nbsp;
+					span.product__value= list.color
+				.product__attr
+					| ОC&nbsp;
+					span.product__value= list.os
+				.product__attr
+					| Связь 3G&nbsp;
+					span.product__value= list.has3g
+				.product__attr
+					| 4G (LTE)&nbsp;
+					span.product__value= list.has4g
+				.product__attr
+					| GPS-модуль&nbsp;
+					span.product__value= list.gps
+			.product__description-text= list.description
+			ul.product__rating.unstyled-list
+				li.product__star.product__star_red
+				li.product__star.product__star_red
+				li.product__star.product__star_red
+				li.product__star.product__star_red
+				li.product__star
+				.rating= rating
+		.product__box.product__box_buy
+			.product__price= list.price
+				span.product__price-label
+					| &#8381;
+			input.product__button.button(type='submit' value='В корзину')
 			.product__availability= list.availability
 
-ul.products.unstyled-list
+ul.products.products_line-block.unstyled-list
 	each value, key in phones		
 		+products(key, value)

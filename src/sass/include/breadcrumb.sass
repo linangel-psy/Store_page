@@ -1,0 +1,14 @@
+.breadcrumb__list
+	margin-bottom: 5px
+.breadcrumb__list:not(:first-child):before
+	content: ' > '
+
+.breadcrumb__link
+	text-decoration: none
+	color: #000
+.breadcrumb__link:hover
+	font-family: $fontSemibold
+	text-decoration: underline
+.breadcrumb__link_current
+	color: $coloreOrange
+	text-decoration: underline

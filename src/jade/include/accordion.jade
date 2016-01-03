@@ -1,46 +1,65 @@
-#accordion.accordion
-	h3.accordion__title
-		| Наличие в магазинах
-	.accordion-section
-		input.accordion-section__input(type='radio' name='all')
-		label.accordion-section__label(for='all')
-			| Во всех магазинах
-		input.accordion-section__input(type='radio' name='near')
-		label.accordion-section__label(for='near')
-			| В ближайших ко мне магазинах
+#accordion.asaide-section.accordion
+	.box
+		.accordion__title.accordion__title_open
+			a.accordion__title-link(href='#') Наличие в магазинах
+		.accordion-section
+			.accordion-section__line
+				label.accordion-section__label(for='all')
+					input.accordion-section__input.accordion-section__input_hidden(type='radio' name='avliability' id='all')
+					.accordion-section__choice.accordion-section__choice_radio
+					.accordion-section__text Во всех магазинах
+			.accordion-section__line
+				label.accordion-section__label(for='near')
+					input.accordion-section__input.accordion-section__input_hidden(type='radio' name='avliability' id='near')
+					.accordion-section__choice.accordion-section__choice_radio
+					.accordion-section__text В ближайшем ко мне магазине
 
-	h3.accordion__title
-		| Бренды
-	.accordion-section
-		each item in brand
-			input.accordion-section__input(type='checkbox' name= item)
-			label.accordion-section__label(for= item)= item
-		a.accordion-section__clear#clearBrand(href='#')
-			| Сбросить фильтр
+	.box
+		.accordion__title.accordion__title_open
+			a.accordion__title-link(href='#') Бренды
+		.accordion-section
+			each item in brand
+				.accordion-section__line
+					label.accordion-section__label(for= item)
+						input.accordion-section__input.accordion-section__input_hidden(type='checkbox' id= item)
+						.accordion-section__choice.accordion-section__choice_checkbox
+						.accordion-section__text= item
+			a.accordion-section__clear#clearBrand(href='#')
+				| Сбросить фильтр
 
-	h3.accordion__title Цена
-	.accordion-section
-		label.accordion-section__label(for='price-min')
-			| от
-		input.accordion-section__input(type='text' name='price-min')
-		label.accordion-section__label(for='price-max')
-			| до
-		input.accordion-section__input(type='text' name='price-max')
-		
+	.box
+		.accordion__title.accordion__title_open
+			a.accordion__title-link(href='#') Цена
+		.accordion-section
+			.accordion-section__text
+				| от
+				input.accordion-section__input.accordion-section__input_text.accordion-section__input_text_min(type='text' id='price-min')
+			.accordion-section__text.accordion-section__text_right
+				| до
+				input.accordion-section__input.accordion-section__input_text.accordion-section__input_text_max(type='text' id='price-max')
+			.accordion-section__slider
+			
 
 
-	h3.accordion__title
-		| Цвет
-	ul.accordion-section.unstyled-list
-		each value, key in color
-			li.accordion-section__list
-				a.accordion-section__color(href='#' id= key)= value
+	.box
+		.accordion__title.accordion__title_open
+			a.accordion__title-link(href='#') Цвет
+		ul.accordion-section.accordion-section_color.unstyled-list
+			each value, key in color
+				li.accordion-section__list
+					a.accordion-section__color(class='accordion-section__color_'+ key href='#')= value
 
-	h3.accordion__title
-		| Операционная система
-	.accordion-section
-		each item in os
-			input.accordion-section__input(type='checkbox' name= item)
-			label.accordion-section__label(for= item)= item
-		a.accordion-section__clear#clearOs(href='#')
-			| Сбросить фильтр
+		.box
+		.accordion__title.accordion__title_open
+			a.accordion__title-link(href='#') Операционная система
+		.accordion-section
+			each item in os
+				.accordion-section__line
+					label.accordion-section__label(for= item)
+						input.accordion-section__input.accordion-section__input_hidden(type='checkbox' id= item)
+						.accordion-section__choice.accordion-section__choice_checkbox
+						.accordion-section__text= item
+			a.accordion-section__clear#clearOs(href='#')
+
+
+				| Сбросить фильтр

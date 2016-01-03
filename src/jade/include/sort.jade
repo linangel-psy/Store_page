@@ -1,17 +1,24 @@
 .sort
-	p.sort__label
-		| Сортировать по
-	ul.sort__list.unstyled-list
-		li.sort__choice
+	.sort__box.sort__box_left
+		.sort__item.sort__item_label
+			| Сортировать по
+		.sort__item.sort__item_list-label
 			| по цене
-		li.sort__choice
-			| по популярности
-	p.sort__label
-		| Вид каталога
-	ul.sort__show.unstyled-list
-		li.sort__type.sort__type_list-block
-			| list block
-		li.sort__type.sort__type_block
-			| block
-		li.sort__type.sort__type_list
-			| list
+		ul.sort__item.sort__item_list.unstyled-list
+			li.sort__choice
+				| по цене
+			li.sort__choice
+				| по популярности
+	.sort__box.sort__box_right
+		.sort__item.sort__item_label
+			| Вид каталога
+		ul.sort__item.sort__item_show.unstyled-list
+			li.sort__type
+				a.sort__link.sort__link_list-block(href='#')
+					| list block
+			li.sort__type
+				a.sort__link.sort__link_block(href='#')
+					| block
+			li.sort__type
+				a.sort__link.sort__link_list(href='#')
+					| list

@@ -15,34 +15,20 @@ var gulp = require('gulp'),
 /* --------- paths --------- */
 var paths = {
     sass: {
-    	src: [
-            'src/sass/**/*.sass'
-        ],
-        location: [
-            'bower_components/normalize-sass/_normalize.sass',
-            'src/sass/main.sass'
-        ],
+    	src: 'src/sass/**/*.sass',
+        location: 'src/sass/main.sass',
         destination: 'www/css'
     },
 
     js: {
-    	src: [
-    		'src/js/**/*.js'
-    	],
-        location: [
-            'bower_components/jquery/dist/jquery.js',
-            'src/js/main.js'
-        ],
+    	src: 'src/js/**/*.js',
+        location: 'src/js/main.js',
         destination: 'www/js'
     },
 
     jade: {
-    	src: [
-    		'src/jade/**/*.jade'
-    	],
-        location: [
-            'src/jade/*.jade'
-        ],
+    	src: 'src/jade/**/*.jade',
+        location: 'src/jade/*.jade',
 	    destination: 'www'
 	}
 };
@@ -89,7 +75,9 @@ gulp.task('sprite', function () {
         .pipe(spritesmith({
             imgName: 'sprite.png',
             imgPath: '../img/sprite.png',
-            cssName: 'sprite.sass'
+            cssName: 'sprite.sass',
+            padding: 20,
+            algorithm: 'left-right'
         }));
     spriteData.img.pipe(gulp.dest('www/img/'));
     spriteData.css.pipe(gulp.dest('src/sass/'));

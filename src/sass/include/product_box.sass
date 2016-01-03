@@ -1,0 +1,210 @@
+.products
+	width: 760px
+	margin-bottom: 70px
+	.product__button
+		font-family: $fontBold
+		font-size: $fontSize
+		padding: 5px 12px 6px 12px
+	.product__button:hover
+		box-shadow: 0px 1px 7.2px 0.8px rgba(153, 153, 153, 0.75)
+.product
+	display: inline-block
+	border: 1px solid $colorGray
+	background: #FBFBFB
+.product:hover
+	box-shadow: 0px 1px 7.2px 0.8px rgba(153, 153, 153, 0.75)
+	position: relative
+    z-index: 2
+.product__slideshow
+	width: 135px
+	margin: auto
+	margin-bottom: 6px
+.product__img-box
+	border: 1px solid $colorGray
+	background: #fff
+	overflow: hidden
+	border-radius: 2px
+.product__img
+	width: 100%
+	height: auto
+.product__img-box_big
+	width: 135px
+	height: 135px
+	margin: 20px 0 15px 0
+.product__img-line
+	width: 155px
+.product__img-box_mini
+	display: inline-block
+	width: 32px
+	height: 32px
+	margin-right: 14px
+.product__code-label
+	font-family: $fontBold
+	font-size: 12px
+	color: #7F7F7F
+.product__title
+	font-family: $fontSemibold
+.product__rating
+	margin-bottom: 3px
+	display: inline-block
+.product__star
+	display: inline-block
+	margin-left: 1px
+	@include sprite($white-star)
+.product__star_red
+	@include sprite-position($red-star)
+.rating
+	font-style: normal
+	display: inline-block
+	margin-left: 15px
+	color: #fff
+	line-height: 15px
+	font-family: $fontSemibold
+	font-size: 12px
+	text-align: center
+	@include sprite($rating-background)	
+.product__price
+	font-family: $fontSemibold
+	font-size: 18px
+.product__price-label
+	font-family: $fontRegular
+.product__availability
+	font-family: $fontBold
+	font-size: 12px
+	color: #7F7F7F
+.product__availability:before
+	content: ' '
+	display: inline-block
+	margin: 0 10px 0 8px
+	@include sprite($green_dot)
+.products_block
+	.product
+		width: 232px
+		margin: 0 15px 15px 0
+		height: 515px
+		vertical-align: top
+		border-radius: 10px
+	.product__code-label, .product__code, .product__description-text, .product__title-type
+		display: none
+	.product__title
+		text-align: center
+		width: 200px
+		margin: auto
+		height: 42px
+		overflow: hidden
+	.product__box
+		width: 210px
+		margin: auto
+	.product__description
+		height: 140px
+		overflow: hidden
+		margin-bottom: 9px
+	.product__attr
+		line-height: 20px
+		padding: 0 2px 0 2px
+	.product__attr:nth-child(2n+1)
+		background: #E0E0E0
+	.product__value
+		float: right
+	.product__rating
+		margin-left: 30px
+	.product__price
+		text-align: center
+		margin-bottom: 5px
+	.product__availability
+		float: left
+		margin-top: 3px
+	.product__button
+		float: right
+
+.products_line-block
+	.product
+		width: 740px
+		margin-bottom: -1px
+	.product:first-child
+		border-radius: 10px 10px 0 0
+	.product:last-child
+		border-radius: 0 0 10px 10px
+	.product__box
+		display: inline-block
+		vertical-align: top
+	.product__box_img
+		width: 180px
+	.product__box_about
+		width: 400px
+	.product__box_buy
+		width: 145px
+		height: 205px
+		overflow: hidden
+		border-left: 1px solid $colorGray
+		margin-top: 20px
+	.product__code
+		text-align: center
+		margin-bottom: 10px
+	.product__title
+		font-size: 18px
+		overflow: hidden
+		text-overflow: ellipsis
+		white-space: nowrap
+	.product__description, .product__title-type
+		display: none		
+	.product__description-text
+		margin-bottom: 15px
+		height: 76px
+		overflow: hidden
+		text-overflow: ellipsis
+	.product__price
+		margin: 0 0 128px 48px
+	.product__button
+		display: block
+		margin: auto
+		margin-bottom: 5px
+		margin-left: 25px
+	.product__availability
+		display: block
+		margin-left: 31px
+.products_line
+	.product
+		width: 740px
+		margin-bottom: -1px
+		height: 50px
+	.product:first-child
+		border-radius: 10px 10px 0 0
+	.product:last-child
+		border-radius: 0 0 10px 10px
+	.product__box
+		display: inline-block
+		margin-top: 10px
+	.product__code
+		width: 105px
+		margin-left: 9px
+		line-height: 32px
+		overflow: hidden
+	.product__description, .product__description, .product__title, .product__rating, .product__slideshow, .product__description-text
+		display: none
+	.product__title
+		display: inline-block
+		font-family: $fontRegular
+		margin: 0
+		margin-left: 7px
+		width: 275px
+		line-height: 32px
+		overflow: hidden
+		text-overflow: ellipsis
+		white-space: nowrap
+	.product__price
+		display: inline-block
+		margin-left: 10px
+		width: 80px
+		text-align: right
+		line-height: 32px
+		overflow: hidden
+	.product__availability
+		display: inline-block
+		margin-left: 15px
+		line-height: 32px
+		overflow: hidden
+	.product__button
+		display: inline-block
+		float: right
+		margin-left: 18px

@@ -1,0 +1,55 @@
+.footer
+	background: url(../img/background_footer.jpg)
+	min-width: 1100px
+	height: 220px
+	margin-top: -220px
+.logo-box
+	display: inline-block
+	float: left
+.logo_footer
+	margin-top: 70px
+.text-box
+	display: inline-block
+	text-align: right
+	float: right
+	width: 590px
+.socials__footer
+	margin-top: 35px
+	.socials__list
+		overflow: hidden
+		margin: 0 10px 0 10px
+	.socials__link
+		display: block
+		text-indent: 100px
+		@include sprite-image($footer-fb)
+		@include sprite-width($footer-fb)
+		@include sprite-height($footer-fb)
+	.socials__link_facebook
+		@include sprite-position($footer-fb)
+	.socials__link_facebook:hover
+		@include sprite-position($footer-fb-hover)
+	.socials__link_vk
+		@include sprite-position($footer-vk)
+	.socials__link_vk:hover
+		@include sprite-position($footer-vk-hover)
+	.socials__link_twitter
+		@include sprite-position($footer-tw)
+	.socials__link_twitter:hover
+		@include sprite-position($footer-tw-hover)
+
+.footer-menu
+
+.footer-menu__list
+	padding: 10px
+.footer-menu__link
+	
+.footer-menu__link
+	color: #fff
+
+
+.copyright
+	color: #fff
+	text-align: center
+	border-top: 1px solid #494949
+	font-size: 12px
+	padding-top: 5px

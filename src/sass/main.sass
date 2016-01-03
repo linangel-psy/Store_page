@@ -1,2 +1,71 @@
+@import sprite
+@import var_list
+
+// General
+
+html , body
+	height: 100%
+	width: 100%
+	font-family: $fontRegular
+	font-size: $fontSize
+	color: #000
 body
 	background: #F4F4F4
+.main
+	height: auto
+	min-height: 100%
+.content
+	padding-bottom: 370px
+	width: 1105px
+	margin: auto
+	overflow: hidden
+.conteiner
+	width: 1100px
+	margin: auto
+.content-box
+	display: table
+
+.socials__list
+	display: inline-block
+.button
+	border: 1px solid $coloreOrange
+	border-radius: 5px
+	background: $coloreOrange
+	padding: 10px
+	color: #fff
+	font-size: $fontSizeTitles
+.page-title
+	font-family: $fontBold
+	font-size: 20px
+	margin-bottom: 30px
+
+// Fix
+
+.cf:before, .cf:after
+	content: ' '
+	display: table
+.cf:after
+	clear: both
+.unstyled-list 
+	list-style-type: none
+	padding-left: 0px
+.unstyled-list > li
+	display: inline-block
+
+@import include/header
+
+@import include/breadcrumb
+
+@import include/aside
+
+@import include/section
+
+@import include/sort
+
+@import include/product_box
+
+@import include/page_nav
+
+@import include/info
+
+@import include/footer
