@@ -58,3 +58,12 @@
     font-style: normal;
 
 }
+
+
+
+@font-face {
+    font-family: 'Rouble';
+    src: url('../fonts/rouble.otf');
+    font-weight: normal;
+    font-style: normal;
+}
